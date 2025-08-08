@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User | Fortnite Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans min-h-screen flex flex-col">
+<style>
+    /* Hide any paragraph containing "Discord ID:" */
+p:contains("Discord ID:") {
+  display: none;
+}
+
+</style>
+  <header class="bg-purple-800 p-4 shadow-lg">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Fortnite Settings Tracker</h1>
+<nav class="flex items-center space-x-4">
+  <a href="index.html" class="px-3 hover:underline">Home</a>
+  <a href="settings.html" class="px-3 hover:underline">Settings</a>
+  <a href="search.html" class="px-3 hover:underline font-bold">Search</a>
+
+  <!-- Avatar and Logout Button -->
+  <div id="user-controls" class="hidden flex items-center space-x-2 ml-2">
+    <div id="header-avatar" class="rounded-full border border-gray-700 w-10 h-10 overflow-hidden">
+      <img src="" alt="User Avatar" id="header-avatar-img" class="w-full h-full object-cover" />
+    </div>
+    <button id="logout-btn" class="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded font-semibold text-sm leading-none">
+      Logout
+    </button>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+  <main class="flex-grow max-w-4xl mx-auto py-12 px-6">
+    <h2 class="text-3xl font-bold mb-6">User Settings</h2>
+
+    <div id="profile-info" class="mb-8 space-y-2">
+      <p><strong>Fortnite Username:</strong> <span id="fn-username"></span></p>
+      <p><strong>Discord Username:</strong> <span id="discord-username"></span></p>
+      <p><strong>Platform:</strong> <span id="platform"></span></p>
+    </div>
+
+    <div>
+      <h3 class="text-2xl font-semibold mb-4">Keybinds</h3>
+      <ul id="keybinds-list" class="space-y-2 list-disc list-inside text-lg"></ul>
+    </div>
+  </main>
+
+  <footer class="bg-gray-800 py-4 text-center text-gray-400 text-sm">
+    Programmed by Snowythevulpix with assistance from MXTRIXXX
+  </footer>
+
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="users.js"></script>
+  <script type="module" src="discord.js"></script>
+</body>
+</html>
