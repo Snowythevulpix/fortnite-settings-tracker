@@ -3,7 +3,7 @@
 // =========================
 
 const clientId = "1403159925244428368";
-const redirectUri = "http://127.0.0.1:5500";
+const redirectUri = "https://fortnite-settings-tracker.vercel.app/";
 
 // Login button click handler
 document.getElementById("discord-login")?.addEventListener("click", async () => {
